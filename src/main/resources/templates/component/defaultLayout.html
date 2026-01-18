@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>HTMX + Spring Boot</title>
+
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+
+  </head>
+
+  <body class="overflow-x-hidden">
+
+    <!-- HEADER -->
+    <div th:replace="~{component/header :: header}">
+      no header found
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <main layout:fragment="content">
+      <!-- child pages inject content here -->
+    </main>
+
+    <!-- FOOTER -->
+    <div th:replace="~{component/footer :: footer}">
+      no footer found
+    </div>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
+

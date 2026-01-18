@@ -1,0 +1,42 @@
+ .slide {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      @media screen and (max-width: 760px) {
+        .mobile-gradient-bg {
+          background: linear-gradient(
+            90deg,
+            #5f8ac7 -0.15%,
+            #5f8ac7 14.85%,
+            #78a293 42.85%,
+            #99c152 81.85%,
+            #a6ce39 99.85%
+            );
+        }
+      }
+
+      .slide {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .slide.active {
+        opacity: 1;
+      }
+      .pagination-tabs{
+        transition:600ms ease-out all;
+      }
+      .pagination-tabs.active{
+        width:200px;
+        opacity:1;
+
+      }
+
+      @media screen and (min-width:1400px){
+        .pagination-tabs.active{
+          width:300px; 
+        }
+      }
+
