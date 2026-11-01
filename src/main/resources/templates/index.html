@@ -9,6 +9,7 @@
     <title>Home page</title>
     <link rel="stylesheet" th:href="@{/css/home.css}">
     <script defer th:src="@{/js/home.js}"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
 
   </head>
 
@@ -17,9 +18,13 @@
     <div layout:fragment="content">
       <div th:replace="~{component/heroSection :: heroSection}"> no hero section found. </div>
       <div th:replace="~{component/carousel :: carouselHomePage}"> no carousel found. </div>
-      <h1 class="pt-20 text-2xl font-bold">
-        Index Page Works
-      </h1>
+      <!-- Main Content -->
+      <div class="pt-20">
+        <a hx-get="/hello" hx-trigger="click" hx-target="#indexbody" class="inline-block rounded-full bg-[#c9fd02] px-8 py-4 text-center font-bold text-black transition hover:border-black hover:bg-white">
+          Click Me!!!
+        </a>
+        <h1 id="indexbody" class="pt-20 text-2xl font-bold">Index Page Works</h1>
+      </div>
     </div>
 
   </body>
